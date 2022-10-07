@@ -89,9 +89,8 @@ public class TaxPayer {
 	}
 	
 	public String toString() {
-		return String.format("%n")
-				+ String.format("Resumo do %do contribuinte:%n", 0 + 1)
-				+ String.format("Imposto bruto total: %.2f%n", grossTax(salaryIncome, servicesIncome, capitalIncome))
+		
+		return String.format("Imposto bruto total: %.2f%n", grossTax(salaryIncome, servicesIncome, capitalIncome))
 				+ String.format("Abatimento: %.2f%n", taxRebate(salaryIncome, servicesIncome, capitalIncome, healthSpending, educationSpending))
 				+ String.format("Imposto devido: %.2f%n", netTax(salaryIncome, servicesIncome, capitalIncome, healthSpending, educationSpending));
 	}

@@ -14,6 +14,8 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner scan = new Scanner(System.in);
 		
+		int aux = 0;
+		
 		List<TaxPayer> list = new ArrayList<>();
 		
 		System.out.print("Quantos contribuintes você vai digitar? ");
@@ -41,6 +43,7 @@ public class Program {
 		}
 		
 		for(TaxPayer x : list) {
+			System.out.printf("Digite os dados do %do contribuinte:%n", ++aux);
 			System.out.println(x);
 		}
 		
